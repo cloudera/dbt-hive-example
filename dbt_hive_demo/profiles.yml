@@ -2,13 +2,13 @@ dbt_hive_demo:
   outputs:
     dev_hive:
       type: hive
+      use_http_transport: true
+      use_ssl: true
+      auth_type: ldap #currently only ldap supported
       schema: "{{ env_var('DBT_HIVE_SCHEMA') }}"
       user: "{{ env_var('DBT_HIVE_USER') }}"
       password: "{{ env_var('DBT_HIVE_PASSWORD') }}"
-      auth_type: "{{ env_var('DBT_HIVE_AUTH_TYPE') }}" #currently only ldap supported
       host: "{{ env_var('DBT_HIVE_HOST') }}"
       port: "{{ env_var('DBT_HIVE_PORT') }}"
       http_path: "{{ env_var('DBT_HIVE_HTTP_PATH') }}"
-      use_http_transport: true
-      use_ssl: true
   target: dev_hive
