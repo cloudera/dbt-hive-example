@@ -2,9 +2,9 @@ dbt_hive_demo:
   outputs:
     dev_hive:
       type: hive
-      schema: "{{ env_var('DBT_SCHEMA') }}"
-      user: "{{ env_var('DBT_USER') }}"
-      password: "{{ env_var('DBT_PASSWORD') }}"
-      auth_type: "{{ env_var('DBT_AUTH_TYPE') }}"
-      host: "{{ env_var('DBT_HOST') }}"
+      schema: "{{ env_var('DBT_HIVE_SCHEMA') }}"
+      user: "{{ env_var('DBT_HIVE_USER') }}"
+      password: "{{ env_var('DBT_HIVE_PASSWORD') }}"
+      auth_type: "{{ env_var('DBT_HIVE_AUTH_TYPE') }}"
+      host: "{{ env_var('DBT_HIVE_HOST') }}"
   target: dev_hive
