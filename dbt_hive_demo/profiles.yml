@@ -9,6 +9,6 @@ dbt_hive_demo:
       user: "{{ env_var('DBT_HIVE_USER') }}"
       password: "{{ env_var('DBT_HIVE_PASSWORD') }}"
       host: "{{ env_var('DBT_HIVE_HOST') }}"
-      port: "{{ env_var('DBT_HIVE_PORT') }}"
+      port: "{{ env_var('DBT_HIVE_PORT') | as_number}}"
       http_path: "{{ env_var('DBT_HIVE_HTTP_PATH') }}"
   target: dev_hive
