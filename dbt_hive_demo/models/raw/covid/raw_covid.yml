@@ -18,7 +18,7 @@ version: 2
 
 sources:
   - name: raw_covid
-    schema: dbt_hive_demo
+    schema: dbtdemo
     tables:
       - name: raw_covid__vaccines
       - name: raw_covid__cases
