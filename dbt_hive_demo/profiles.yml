@@ -4,7 +4,7 @@ dbt_hive_demo:
       type: hive
       use_http_transport: true
       use_ssl: true
-      auth_type: ldap #currently only ldap supported
+      auth_type: ldap #now also support kerberos
       schema: "{{ env_var('DBT_HIVE_SCHEMA') }}"
       user: "{{ env_var('DBT_HIVE_USER') }}"
       password: "{{ env_var('DBT_HIVE_PASSWORD') }}"
