@@ -12,7 +12,7 @@ It is recommended to use `venv` to create a Python virtual environment for the d
 ## Requirements
 
 - Python >= 3.8
-- dbt-core >= 1.1.0
+- dbt-core >= 1.4.0
 - git
 
 ## Install
@@ -20,11 +20,12 @@ Start by cloning this repo
 
 `git clone https://github.com/cloudera/dbt-hive-example.git`
 
-Next install the requirements
+Next install the requirements like dbt-core & dbt-hive
 
-`pip install dbt-core`
-
-`pip install dbt-hive`
+```
+cd dbt_hive_demo
+pip install -r requirements.txt
+```
 
 ## Configure
 

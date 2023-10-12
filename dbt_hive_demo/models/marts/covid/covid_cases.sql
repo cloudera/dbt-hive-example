@@ -18,7 +18,8 @@
 
 {{
     config(
-        materialized='incremental'
+        materialized='incremental',
+        pre_hook=["set hive.exec.dynamic.partition=true;"],
     )
 }}
 
