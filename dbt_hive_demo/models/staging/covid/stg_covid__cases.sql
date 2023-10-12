@@ -17,7 +17,7 @@
 #}
 
 select
-  cast(cast(unix_timestamp(date_rep, "dd/MM/yyyy") as timestamp) AS DATE) as date_rep,
+  cast(cast(CURRENT_DATE as timestamp) AS DATE) as date_rep,
   cast(cases as BIGINT) as cases,
   cast(deaths as BIGINT) as deaths,
   geo_id
