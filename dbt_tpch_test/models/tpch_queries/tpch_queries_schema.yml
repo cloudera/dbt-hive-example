@@ -1,0 +1,115 @@
+version: 2
+
+models:
+  - name: tpch_q01
+    tests:
+      - dbt_utils.equality:
+          compare_model: ref('q01_output')
+                
+  - name: tpch_q02
+    tests:
+      - dbt_utils.equality:
+          compare_model: ref('q02_output')
+  - name: tpch_q03
+    tests:
+      - dbt_utils.equality:
+          compare_model: ref('q03_output')
+    columns:
+      - name: order_date
+        tests:
+          - date_range:
+              min_date: '1995-02-19'
+              max_date: '1995-03-13'       
+  - name: tpch_q04
+    tests:
+      - dbt_utils.equality:
+          compare_model: ref('q04_output')
+
+  - name: tpch_q05
+    tests:
+      - dbt_utils.equality:
+          compare_model: ref('q05_output')
+
+  - name: tpch_q06
+    tests:
+      - dbt_utils.equality:
+          compare_model: ref('q06_output')
+                
+  - name: tpch_q07
+
+  - name: tpch_q08
+    tests:
+      - dbt_utils.equality:
+          compare_model: ref('q08_output')
+
+  - name: tpch_q09
+    tests:
+      - dbt_utils.equality:
+          compare_model: ref('q09_output')
+                
+  - name: tpch_q10
+    tests:
+      - dbt_utils.equality:
+          compare_model: ref('q10_output')
+
+  - name: tpch_q11
+    tests:
+      - dbt_utils.equality:
+          compare_model: ref('q11_output')
+
+  - name: tpch_q12
+    tests:
+      - dbt_utils.equality:
+            compare_model: ref('q12_output')
+                
+  - name: tpch_q13
+    tests:
+      - dbt_utils.equality:
+            compare_model: ref('q13_output')
+
+  - name: tpch_q14
+    tests:
+      - dbt_utils.equality:
+            compare_model: ref('q14_output')
+
+  - name: tpch_q15
+    tests:
+      - dbt_utils.equality:
+            compare_model: ref('q15_output')
+                
+  - name: tpch_q16
+    tests:
+      - dbt_utils.equality:
+            compare_model: ref('q16_output')
+
+  - name: tpch_q17
+    tests:
+      - dbt_utils.equality:
+            compare_model: ref('q17_output')
+
+  - name: tpch_q18
+    tests:
+      - dbt_utils.equality:
+            compare_model: ref('q18_output')
+                
+  - name: tpch_q19
+    tests:
+      - dbt_utils.equality:
+            compare_model: ref('q19_output')
+
+  - name: tpch_q20
+    tests:
+      - dbt_utils.equality:
+          compare_model: ref('q20_output')
+
+  - name: tpch_q21
+    tests:
+      - dbt_utils.equality:
+            compare_model: ref('q21_output')
+                
+  - name: tpch_q22
+    tests:
+      - dbt_utils.equality:
+            compare_model: ref('q22_output')
+
+ 
