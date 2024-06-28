@@ -24,7 +24,7 @@ git clone https://github.com/nsharma-25/dbt-tpch-example.git
 Next install dbt-core and dbt-hive
 
 ```
-cd dbt-tpch-test
+cd dbt_tpch_test
 pip install -r requirements.txt
 ```
 Install the required packages mentioned in ```package.yml``` file:
