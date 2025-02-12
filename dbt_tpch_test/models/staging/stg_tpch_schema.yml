@@ -1,0 +1,56 @@
+version: 2
+
+models:
+  - name: stg_tpch_customer
+    columns:
+      - name: customer_key
+        tests:
+          - unique
+          - not_null
+      - name: market_segment
+        tests:
+          - accepted_values:
+              values: ['AUTOMOBILE', 'HOUSEHOLD', 'MACHINERY', 'BUILDING', 'FURNITURE']
+                
+  - name: stg_tpch_lineitem
+
+  - name: stg_tpch_nation
+    columns:
+      - name: nation_key
+        tests:
+          - unique
+          - not_null
+                
+  - name: stg_tpch_orders
+    columns:
+      - name: order_key
+        tests:
+          - unique
+          - not_null
+
+  - name: stg_tpch_partsupp
+    columns:
+      - name: supplier_key
+        tests:
+          - not_null
+                
+  - name: stg_tpch_part
+    columns:
+      - name: part_key
+        tests:
+          - unique
+          - not_null
+
+  - name: stg_tpch_region
+    columns:
+      - name: region_key
+        tests:
+          - unique
+          - not_null
+                
+  - name: stg_tpch_supplier
+    columns:
+      - name: supplier_key
+        tests:
+          - unique
+          - not_null
